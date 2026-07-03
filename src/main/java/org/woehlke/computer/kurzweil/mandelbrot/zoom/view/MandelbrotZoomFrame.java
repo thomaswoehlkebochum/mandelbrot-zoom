@@ -115,6 +115,7 @@ public class MandelbrotZoomFrame extends JFrame implements ImageObserver,
             case BUTTON1:
                 //System.out.println("default BUTTON1");
                 this.model.click(c);
+                this.canvas.repaint();
                 break;
             case BUTTON2:
                 //System.out.println("default BUTTON2");
@@ -123,6 +124,7 @@ public class MandelbrotZoomFrame extends JFrame implements ImageObserver,
             default:
                 //System.out.println("default (button)");
                 model.zoomOut();
+                this.canvas.repaint();
                 break;
         }
         showMe();
