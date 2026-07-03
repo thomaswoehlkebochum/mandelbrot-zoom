@@ -147,6 +147,14 @@ public class GaussianNumberPlane {
         WorldDataItemForMandelbrot item = new WorldDataItemForMandelbrot();
         item.setClicked(clicked);
         if(worldataForMandelbrot.empty()) {
+            WorldDataItemForMandelbrot firstItem = new WorldDataItemForMandelbrot();
+            firstItem.setDelta(complexWorldDimensions);
+            firstItem.setCenter(complexCenterForMandelbrot);
+            double myFirstStartRealX = complexWorldDimensions.getReal()-complexCenterForMandelbrot.getReal();
+            double myFirstStartImgY = complexWorldDimensions.getImg()-complexCenterForMandelbrot.getImg();
+            ComplexNumber firstStart = new ComplexNumber(myFirstStartRealX,myFirstStartImgY);
+            firstItem.setUpperLeftCorner(firstStart);
+            worldataForMandelbrot.push(firstItem);
             //ComplexNumber center = getComplexNumberFromLatticeCoordsForMandelbrot(clicked);
             double realX = (
                 complexCenterForMandelbrot.getReal()
@@ -205,6 +213,8 @@ public class GaussianNumberPlane {
     }
 
     public void zoomOut(){
+        WorldDataItemForMandelbrot oldItem = worldataForMandelbrot.pop();
+        computeTheMandelbrotSetFor(oldItem);
         System.out.println("zoomOut");
     }
 }
