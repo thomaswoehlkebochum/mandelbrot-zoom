@@ -27,22 +27,22 @@ mandelbrotZoom:
   view:
     title: 'Mandelbrot Set'
     subtitle: 'Fractal Mandelbrot Set drawn by a Turing Machine'
-    copyright: '(c) 2022 Thomas Woehlke'
+    copyright: '(c) 2026 Thomas Woehlke'
     buttonsZoomOut: 'Zoom Out'
     buttonsZoomLabel: 'Zoom'
     width: 400
     height: 292
-    scale: 3
+    scale: 2
   model:
     complexWorldDimension:
-      realX: 3.2d
-      imgY: 2.34d
+      realX: 3.2
+      imgY: 2.34
     complexCenterForMandelbrot:
-      realX: -2.2d
-      imgY: -1.17d
+      realX: -2.2
+      imgY: -1.17
     complexCenterForJulia:
-      realX: -1.6d
-      imgY:  -1.17d
+      realX: -1.6
+      imgY: -1.17
   control:
     threadSleepTime: 50
 simulatedevolution:
