@@ -51,7 +51,7 @@ public class MandelbrotZoomCanvas extends JComponent {
             for(int x = 0; x < model.getWorldDimensions().getX(); x++){
                 Color stateColor = getColorForCellStatus(model.getCellStatusFor(x,y));
                 g.setColor(stateColor);
-                g.drawRect(x,y,1,1);
+                g.fillRect(x,y,1,1);
             }
         }
     }
