@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.woehlke.computer.kurzweil</groupId>
         <artifactId>computer-kurzweil-parent</artifactId>
-        <version>1.0.6</version>
+        <version>1.0.7</version>
     </parent>
 
     <artifactId>mandelbrot-zoom</artifactId>
@@ -18,14 +18,14 @@
     <inceptionYear>2013</inceptionYear>
 
     <scm>
-        <connection>scm:git:git@github.com:Computer-Kurzweil/mandelbrot-zoom.git</connection>
-        <developerConnection>scm:git:git@github.com:Computer-Kurzweil/mandelbrot-zoom.git</developerConnection>
-        <url>https://github.com/BloodMoneyApp/mandelbrot-zoom/tree/${project.scm.tag}</url>
+        <connection>scm:git:git@github.com:thomaswoehlkebochum/mandelbrot-zoom.git</connection>
+        <developerConnection>scm:git:git@github.com:thomaswoehlkebochum/mandelbrot-zoom.git</developerConnection>
+        <url>https://github.com/thomaswoehlkebochum/mandelbrot-zoom/tree/${project.scm.tag}</url>
         <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
-        <url>https://github.com/Computer-Kurzweil/mandelbrot-zoom/issues/</url>
+        <url>https://github.com/thomaswoehlkebochum/mandelbrot-zoom/issues/</url>
         <system>GitHub</system>
     </issueManagement>
 
@@ -114,7 +114,8 @@
                 <finalName>${project.artifactId}</finalName>
                 <defaultGoal>
                     clean
-                    dependency:purge-local-repository dependency:resolve dependency:resolve-plugins dependency:sources
+                    dependency:purge-local-repository
+                    dependency:resolve dependency:resolve-plugins dependency:resolve-sources
                     install
                     source:jar source:test-jar javadoc:jar javadoc:test-jar
                     site site:jar site:deploy
