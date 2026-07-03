@@ -32,8 +32,8 @@ public class GaussianNumberPlane {
 
     private final static double complexWorldDimensionRealX = 3.2d;
     private final static double complexWorldDimensionImgY = 2.34d;
-    private final static double complexCenterForMandelbrotRealX = -2.2f;
-    private final static double complexCenterForMandelbrotImgY = -1.17f;
+    private final static double complexCenterForMandelbrotRealX = -2.2d;
+    private final static double complexCenterForMandelbrotImgY = -1.17d;
 
     private volatile ComplexNumber complexWorldDimensions;
     private volatile ComplexNumber complexCenterForMandelbrot;
@@ -150,10 +150,9 @@ public class GaussianNumberPlane {
             WorldDataItemForMandelbrot firstItem = new WorldDataItemForMandelbrot();
             firstItem.setDelta(complexWorldDimensions);
             firstItem.setCenter(complexCenterForMandelbrot);
-            double myFirstStartRealX = complexWorldDimensions.getReal()-complexCenterForMandelbrot.getReal();
-            double myFirstStartImgY = complexWorldDimensions.getImg()-complexCenterForMandelbrot.getImg();
-            ComplexNumber firstStart = new ComplexNumber(myFirstStartRealX,myFirstStartImgY);
-            firstItem.setUpperLeftCorner(firstStart);
+            double myFirstStartRealX = -(complexWorldDimensions.getReal()/2.0d); // TODO
+            double myFirstStartImgY = -(complexWorldDimensions.getImg()/2.0d); // TODO
+            firstItem.setUpperLeftCorner(new ComplexNumber(myFirstStartRealX,myFirstStartImgY));
             worldataForMandelbrot.push(firstItem);
             //ComplexNumber center = getComplexNumberFromLatticeCoordsForMandelbrot(clicked);
             double realX = (
@@ -213,8 +212,10 @@ public class GaussianNumberPlane {
     }
 
     public void zoomOut(){
-        WorldDataItemForMandelbrot oldItem = worldataForMandelbrot.pop();
-        computeTheMandelbrotSetFor(oldItem);
-        System.out.println("zoomOut");
+        if(!worldataForMandelbrot.empty()) {
+            WorldDataItemForMandelbrot oldItem = worldataForMandelbrot.pop();
+            computeTheMandelbrotSetFor(oldItem);
+            System.out.println("zoomOut");
+        }
     }
 }
