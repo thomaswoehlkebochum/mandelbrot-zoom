@@ -105,12 +105,12 @@ public class GaussianNumberPlane {
         }
     }
 
-    private synchronized void computeTheJuliaSetForC(ComplexNumber c) {
+    private synchronized void computeTheMandelbrotSetForC() {
         for (int y = 0; y < worldDimensions.getY(); y++) {
             for (int x = 0; x < worldDimensions.getX(); x++) {
                 Point zPoint = new Point(x, y);
-                ComplexNumber z = this.getComplexNumberFromLatticeCoordsForJulia(zPoint);
-                lattice[x][y] = z.computeJuliaSet(c);
+                ComplexNumber z = this.getComplexNumberFromLatticeCoordsForMandelbrot(zPoint);
+                lattice[x][y] = z.computeMandelbrotSet();
             }
         }
     }
@@ -118,10 +118,11 @@ public class GaussianNumberPlane {
     public synchronized void computeTheJuliaSetFor(Point pointFromMandelbrotSet) {
         ComplexNumber complexNumberForJuliaSetC =
             getComplexNumberFromLatticeCoordsForMandelbrot(pointFromMandelbrotSet);
-        computeTheJuliaSetForC(complexNumberForJuliaSetC);
+        computeTheMandelbrotSetForC();
     }
 
     public void zoomIn(Point clicked){
+        computeTheJuliaSetFor(clicked);
         System.out.println("zoomIn " + clicked.getX()+" : "+clicked.getY());
     }
 
