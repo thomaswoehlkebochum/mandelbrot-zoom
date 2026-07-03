@@ -45,10 +45,10 @@ public class ApplicationModel {
         this.applicationStateMachine = new ApplicationStateMachine();
     }
 
-    public synchronized boolean click(Point c) {
+    public synchronized boolean click(Point clicked) {
         applicationStateMachine.click();
         boolean repaint = true;
-        this.zoomIn();
+        this.zoomIn(clicked);
         return repaint;
     }
 
@@ -64,8 +64,8 @@ public class ApplicationModel {
         return repaint;
     }
 
-    public void zoomIn(){
-        this.gaussianNumberPlane.zoomIn();
+    public void zoomIn(Point clicked){
+        this.gaussianNumberPlane.zoomIn(clicked);
     }
 
     public void zoomOut(){

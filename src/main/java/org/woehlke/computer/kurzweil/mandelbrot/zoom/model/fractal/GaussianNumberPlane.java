@@ -121,8 +121,8 @@ public class GaussianNumberPlane {
         computeTheJuliaSetForC(complexNumberForJuliaSetC);
     }
 
-    public void zoomIn(){
-        System.out.println("zoomIn");
+    public void zoomIn(Point clicked){
+        System.out.println("zoomIn " + clicked.getX()+" : "+clicked.getY());
     }
 
     public void zoomOut(){
