@@ -33,7 +33,7 @@ After the Turing Machine finished to run around the Set, the Application paints 
 
 ![Running around the Edge of the Mandelbrot Set](src/main/resources/img/screen02.png)
 
-### Computing the Mandelbrot Set
+### Computing the Area outside the Mandelbrot Set
 
 ![Computing the Area outside the Mandelbrot Set](src/main/resources/img/screen03.png)
 
