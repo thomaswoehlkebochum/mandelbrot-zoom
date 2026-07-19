@@ -26,7 +26,7 @@ mandelbrotJulia:
 mandelbrotZoom:
   view:
     title: 'Mandelbrot Set'
-    subtitle: 'Fractal Mandelbrot Set drawn by a Turing Machine'
+    subtitle: 'Zoom into Fractal Mandelbrot Set by left click into the Set'
     copyright: '(c) 2026 Thomas Woehlke'
     buttonsZoomOut: 'Zoom Out'
     buttonsZoomLabel: 'Zoom'

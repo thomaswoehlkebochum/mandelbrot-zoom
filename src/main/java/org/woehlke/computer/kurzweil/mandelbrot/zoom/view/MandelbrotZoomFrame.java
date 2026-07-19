@@ -21,8 +21,8 @@ import java.io.Serializable;
 import static java.awt.event.MouseEvent.*;
 
 /**
- * Mandelbrot Set drawn by a Turing Machine. Click to see corresponding Julia set.
- * (C) 2006 - 2022 Thomas Woehlke.
+ * Mandelbrot Set. Click into the Set to zoom in and click Button to zoom out.
+ * (C) 2006 - 2026 Thomas Woehlke.
  * @author Thomas Woehlke
  *
  * @see ControllerThread
