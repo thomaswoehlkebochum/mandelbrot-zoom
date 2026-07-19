@@ -40,9 +40,6 @@ mandelbrotZoom:
     complexCenterForMandelbrot:
       realX: -2.2
       imgY: -1.17
-    complexCenterForJulia:
-      realX: -1.6
-      imgY: -1.17
   control:
     threadSleepTime: 50
 simulatedevolution:
