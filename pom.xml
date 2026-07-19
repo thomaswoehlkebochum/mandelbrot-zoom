@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>mandelbrot-zoom</artifactId>
-    <version>3.0.11-SNAPSHOT</version>
+    <version>3.0.11</version>
     <packaging>jar</packaging>
 
     <name>Mandelbrot Zoom</name>
@@ -21,7 +21,7 @@
         <connection>scm:git:git@github.com:thomaswoehlkebochum/mandelbrot-zoom.git</connection>
         <developerConnection>scm:git:git@github.com:thomaswoehlkebochum/mandelbrot-zoom.git</developerConnection>
         <url>https://github.com/thomaswoehlkebochum/mandelbrot-zoom/tree/${project.scm.tag}</url>
-        <tag>HEAD</tag>
+        <tag>mandelbrot-zoom-3.0.11</tag>
     </scm>
 
     <issueManagement>
