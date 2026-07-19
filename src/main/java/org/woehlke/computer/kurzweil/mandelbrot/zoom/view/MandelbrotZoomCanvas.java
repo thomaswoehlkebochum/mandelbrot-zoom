@@ -57,9 +57,9 @@ public class MandelbrotZoomCanvas extends JComponent {
     }
 
     private Color getColorForCellStatus(int cellStatus){
-        int red = 0;
+        int red = 0; //cellStatus % 256;
         int green = 0;
-        int blue = cellStatus * 3 + 32;
+        int blue = cellStatus * 3 + 16;
         blue = Math.min(blue,255);
         Color stateColor = new Color(red, green, blue);
         return stateColor;
