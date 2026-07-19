@@ -3,13 +3,13 @@ package org.woehlke.computer.kurzweil.mandelbrot.zoom.model.fractal;
 import java.util.Objects;
 
 /**
- * Mandelbrot Set drawn by a Turing Machine.
- * (C) 2006 - 2022 Thomas Woehlke.
+ * Mandelbrot Set Zoom in by Mouse Click and Zoom out by Button.
+ * (C) 2006 - 2026 Thomas Woehlke.
  * @author Thomas Woehlke
  *
  * @see <a href="https://thomas-woehlke.blogspot.com/2016/01/mandelbrot-set-drawn-by-turing-machine.html">Blog Article</a>
- * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
- * @see <a href="https://java.woehlke.org/mandelbrot-julia/">Maven Project Repository</a>
+ * @see <a href="https://github.com/thomaswoehlkebochum/mandelbrot-zoom">Github Repository</a>
+ * @see <a href="https://java.woehlke.org/mandelbrot-zoom/">Maven Project Repository</a>
  *
  * @see GaussianNumberPlane
  *
