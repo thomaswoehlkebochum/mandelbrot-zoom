@@ -36,7 +36,6 @@ public class ComplexNumber {
         this.img = 0.0d;
         this.iterations=0;
         this.inMandelbrotSet=false;
-        this.inJuliaSet=false;
     }
 
     public ComplexNumber(ComplexNumber complexNumber) {
@@ -44,7 +43,6 @@ public class ComplexNumber {
         this.img = complexNumber.img;
         this.iterations=complexNumber.iterations;
         this.inMandelbrotSet=complexNumber.inMandelbrotSet;
-        this.inJuliaSet=complexNumber.inJuliaSet;
     }
 
     public ComplexNumber(double real, double img) {
@@ -52,7 +50,6 @@ public class ComplexNumber {
         this.img = img;
         this.iterations=0;
         this.inMandelbrotSet=false;
-        this.inJuliaSet=false;
     }
 
     public ComplexNumber plus(ComplexNumber complexNumber){
@@ -71,7 +68,6 @@ public class ComplexNumber {
 
     private volatile int iterations;
     private volatile boolean inMandelbrotSet;
-    private volatile boolean inJuliaSet;
 
     public synchronized int computeMandelbrotSet() {
         int iterationsTmp = 0;
@@ -85,24 +81,8 @@ public class ComplexNumber {
         return this.iterations;
     }
 
-    public synchronized int computeJuliaSet(ComplexNumber c) {
-        int iterationsTmp = 0;
-        ComplexNumber z = new ComplexNumber(this);
-        do {
-            iterationsTmp++;
-            z = z.square().plus(c);
-        } while (z.isNotDivergent() && (iterationsTmp < MAX_ITERATIONS));
-        this.inJuliaSet = z.isNotDivergent();
-        this.iterations = this.inJuliaSet?0:iterationsTmp;
-        return this.iterations;
-    }
-
     public synchronized boolean isInMandelbrotSet() {
         return inMandelbrotSet;
-    }
-
-    public synchronized boolean isInJuliaSet() {
-        return inJuliaSet;
     }
 
     public synchronized boolean isNotDivergent(){
@@ -116,14 +96,12 @@ public class ComplexNumber {
         ComplexNumber that = (ComplexNumber) o;
         return Double.compare(that.getReal(), getReal()) == 0 &&
             Double.compare(that.getImg(), getImg()) == 0 &&
-            iterations == that.iterations &&
-            isInMandelbrotSet() == that.isInMandelbrotSet() &&
-            isInJuliaSet() == that.isInJuliaSet();
+            iterations == that.iterations;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getReal(), getImg(), iterations, isInMandelbrotSet(), isInJuliaSet());
+        return Objects.hash(getReal(), getImg(), iterations);
     }
 
     @Override
@@ -133,7 +111,6 @@ public class ComplexNumber {
             ", img=" + img +
             ", iterations=" + iterations +
             ", inMandelbrotSet=" + inMandelbrotSet +
-            ", inJuliaSet=" + inJuliaSet +
             '}';
     }
 }

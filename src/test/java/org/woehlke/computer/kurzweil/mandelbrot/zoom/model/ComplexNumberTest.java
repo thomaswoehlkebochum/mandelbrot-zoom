@@ -40,34 +40,4 @@ public class ComplexNumberTest {
         assertTrue(2 == iterations);
         log.info("computeMandelbrotTest2 done");
     }
-
-    @Test
-    public void computeJuliaTest1(){
-        log.info("computeJuliaTest1 start");
-        ComplexNumber z = new ComplexNumber(0.1d,0.2d);
-        ComplexNumber c = new ComplexNumber(0.2d,0.1d);
-        int iterations = z.computeJuliaSet(c);
-        log.info("computeJuliaTest1 iterations : "+ iterations);
-        boolean isInJuliaSet = z.isInJuliaSet();
-        assertTrue(isInJuliaSet);
-        assertNotEquals(ComplexNumber.MAX_ITERATIONS, iterations);
-        assertTrue(iterations < ComplexNumber.MAX_ITERATIONS);
-        assertTrue(0 == iterations);
-        log.info("computeJuliaTest1 done");
-    }
-
-    @Test
-    public void computeJuliaTest2(){
-        log.info("computeJuliaTest2 start");
-        ComplexNumber z = new ComplexNumber(0.1d,0.2d);
-        ComplexNumber c = new ComplexNumber(1.0d,1.1d);
-        int iterations = z.computeJuliaSet(c);
-        log.info("computeJuliaTest2 iterations :"+ iterations);
-        boolean isInJuliaSet = z.isInJuliaSet();
-        assertFalse(isInJuliaSet);
-        assertNotEquals(ComplexNumber.MAX_ITERATIONS, iterations);
-        assertTrue(iterations < ComplexNumber.MAX_ITERATIONS);
-        assertTrue(2 == iterations);
-        log.info("computeJuliaTest2 done");
-    }
 }
