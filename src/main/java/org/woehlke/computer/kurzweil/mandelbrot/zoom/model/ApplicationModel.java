@@ -28,7 +28,6 @@ public class ApplicationModel {
 
     private volatile GaussianNumberPlane gaussianNumberPlane;
     private volatile MandelbrotTuringMachine mandelbrotTuringMachine;
-    //private volatile ApplicationStateMachine applicationStateMachine;
 
     private volatile ComputerKurzweilProperties config;
     private volatile MandelbrotZoomFrame frame;
@@ -38,27 +37,15 @@ public class ApplicationModel {
         this.frame = frame;
         this.gaussianNumberPlane = new GaussianNumberPlane(this);
         this.mandelbrotTuringMachine = new MandelbrotTuringMachine(this);
-        //this.applicationStateMachine = new ApplicationStateMachine();
     }
 
     public synchronized boolean click(Point clicked) {
-        //applicationStateMachine.click();
         boolean repaint = true;
         this.zoomIn(clicked);
         return repaint;
     }
 
     public synchronized boolean step() {
-        /*
-        boolean repaint = false;
-        switch (applicationStateMachine.getApplicationState()) {
-            case MANDELBROT:
-                repaint = mandelbrotTuringMachine.step();
-                break;
-            case JULIA_SET:
-                break;
-        }
-         */
         return mandelbrotTuringMachine.step();
     }
 
