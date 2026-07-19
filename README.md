@@ -19,13 +19,8 @@ Starting with Complex Number of Cell right from the Mandelbrot Set the Turing Ma
 The Turing-Machine then goes around the Set by computing wether the Complex Number of the Cell is inside the Set. If not it turns left, else it turns right. After that it goes one step forward.
 After the Turing Machine finished to run around the Set, the Application paints the Inside of the Set Black und computes the Colors of the Outside.
 
-## Julia Set
-The Mandelbrot Set is drawn into the Complex Number Plane and so clicking into it, it delivers the Complex Number to calculate a Julia Set for it.
-The most beautiful Julia Sets are drawn by clicking into the Border of the Mandelbrot Set.
-
 ## More
 * [https://en.wikipedia.org/wiki/Mandelbrot_set](https://en.wikipedia.org/wiki/Mandelbrot_set)
-* [https://en.wikipedia.org/wiki/Julia_set](https://en.wikipedia.org/wiki/Julia_set)
 * [https://en.wikipedia.org/wiki/Turing_machine](https://en.wikipedia.org/wiki/Turing_machine)
 
 ## Screenshots
@@ -38,26 +33,17 @@ The most beautiful Julia Sets are drawn by clicking into the Border of the Mande
 
 ![Running around the Edge of the Mandelbrot Set](src/main/resources/img/screen02.png)
 
-### Computing the Area outside the Mandelbrot Set
+### Computing the Mandelbrot Set
 
 ![Computing the Area outside the Mandelbrot Set](src/main/resources/img/screen03.png)
 
-### Clicked somewhere on the Edge of Mandelbrot Set: The Julia Set
-
-![Clicked somewhere on the Edge of Mandelbrot Set: The Julia Set](src/main/resources/img/julia01.png)
-
-### Clicked  on another Point on the Edge of Mandelbrot Set: The Julia Set
-
-![Clicked on another Point on the Edge of Mandelbrot Set: The Julia Set](src/main/resources/img/julia02.png)
-
-
 ### Repositories
-* [Github Repository](https://github.com/Computer-Kurzweil/mandelbrot-zoom)
+* [Github Repository](https://github.com/thomaswoehlkebochum/mandelbrot-zoom)
 * [Maven Project Reports](https://java.woehlke.org/mandelbrot-zoom)
 
 ### Run the Application
 ```
-git clone https://github.com/Computer-Kurzweil/mandelbrot-zoom.git
+git clone https://github.com/thomaswoehlkebochum/mandelbrot-zoom.git
 cd mandelbrot-zoom
 ./mvnw
 ```
