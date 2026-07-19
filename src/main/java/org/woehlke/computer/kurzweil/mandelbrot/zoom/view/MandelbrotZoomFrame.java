@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.woehlke.computer.kurzweil.mandelbrot.zoom.config.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.mandelbrot.zoom.control.ControllerThread;
 import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.ApplicationModel;
-import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.common.Point;
+import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.Point;
 import org.woehlke.computer.kurzweil.mandelbrot.zoom.view.labels.PanelButtons;
 import org.woehlke.computer.kurzweil.mandelbrot.zoom.view.labels.PanelCopyright;
 import org.woehlke.computer.kurzweil.mandelbrot.zoom.view.labels.PanelSubtitle;

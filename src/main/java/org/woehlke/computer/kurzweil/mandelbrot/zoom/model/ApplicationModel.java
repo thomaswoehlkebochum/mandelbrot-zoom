@@ -3,8 +3,6 @@ package org.woehlke.computer.kurzweil.mandelbrot.zoom.model;
 import lombok.extern.slf4j.Slf4j;
 
 import org.woehlke.computer.kurzweil.mandelbrot.zoom.config.ComputerKurzweilProperties;
-import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.fractal.GaussianNumberPlane;
-import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.common.Point;
 import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.turing.MandelbrotTuringMachine;
 import org.woehlke.computer.kurzweil.mandelbrot.zoom.view.MandelbrotZoomFrame;
 

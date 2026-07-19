@@ -1,9 +1,7 @@
-package org.woehlke.computer.kurzweil.mandelbrot.zoom.model.fractal;
+package org.woehlke.computer.kurzweil.mandelbrot.zoom.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.ApplicationModel;
-import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.common.Point;
 
 import java.util.Stack;
 

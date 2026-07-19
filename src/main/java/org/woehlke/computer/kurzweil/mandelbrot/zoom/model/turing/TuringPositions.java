@@ -1,6 +1,6 @@
 package org.woehlke.computer.kurzweil.mandelbrot.zoom.model.turing;
 
-import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.common.Point;
+import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.Point;
 
 /**
  * Mandelbrot Set Zoom in by Mouse Click and Zoom out by Button.

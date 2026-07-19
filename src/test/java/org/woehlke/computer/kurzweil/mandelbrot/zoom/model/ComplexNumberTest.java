@@ -1,7 +1,6 @@
 package org.woehlke.computer.kurzweil.mandelbrot.zoom.model;
 
 import org.junit.jupiter.api.Test;
-import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.fractal.ComplexNumber;
 
 import java.util.logging.Logger;
 

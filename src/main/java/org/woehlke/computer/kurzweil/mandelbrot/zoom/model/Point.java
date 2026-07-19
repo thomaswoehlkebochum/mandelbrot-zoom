@@ -1,4 +1,4 @@
-package org.woehlke.computer.kurzweil.mandelbrot.zoom.model.common;
+package org.woehlke.computer.kurzweil.mandelbrot.zoom.model;
 
 import java.util.Objects;
 

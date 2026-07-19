@@ -1,7 +1,7 @@
 package org.woehlke.computer.kurzweil.mandelbrot.zoom.model.turing;
 
 import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.ApplicationModel;
-import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.fractal.GaussianNumberPlane;
+import org.woehlke.computer.kurzweil.mandelbrot.zoom.model.GaussianNumberPlane;
 
 /**
  * Mandelbrot Set Zoom in by Mouse Click and Zoom out by Button.
